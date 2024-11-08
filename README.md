@@ -9,8 +9,10 @@ We will explore this topic based on the CMU Movie Summary Corpus dataset, and [o
 - Which is more important with regards to a movie being nominated for or winning an Oscar: critical acclamation, or box office performance?
 - To what degree are Oscar winnings and nominations representative of the US population ethnicity statistics?
 
-## Additional datasets
-In addition to the CMU Movie Summary Corpus dataset, we will be using a dataset of Oscar awards (https://www.kaggle.com/datasets/unanimad/the-oscar-award) and
+## Datsets
+Our main datset is the CMU Movie Summary Corpus, which contains infomration about movies (such as release date, revenue, run time, etc.), actors involved in the movies and plot summaries.
+In addition to the CMU Movie Summary Corpus dataset, we will be using a dataset of Oscar awards (https://www.kaggle.com/datasets/unanimad/the-oscar-award).
+TODO: Add IMDB datset info
 We join these with our main dataset without major problems, see [data preprocessing pipeline]
 
 ## Methods
