@@ -1,9 +1,9 @@
-# What factors affect Oscar wins/nomiations?
+# What factors affect Oscar nomiations?
 
 ## Abstract
 The Oscar Academy Awards are some of the most renowned movie awards in the world. Experts and critics carefully select nominees, and reward a few of them with the awards. In this project we aim to examine how various factors affect Oscar nominations in categories for specific actors (Such as best actress, best supporting actor). What drives the Oscar Academy Awards' decisions to nominate movies? Do Oscar nominations align with the popular opinion?
 To see if public opinion aligns with Oscar nominations, we will explore movie revenue and IMDB ratings in relation to Oscar nominations. To explore other factors affecting Oscar nominations, we look at properties such as actor ethnicity, theme/genre of the movies and actor history.  
-We will explore this topic based on the CMU Movie Summary Corpus dataset, and [others](#additional-datasets). This study will be limited to American movies, as there is likely a skew towards American movies winning the Oscars (TODO: show this).
+We will explore this topic based on the CMU Movie Summary Corpus dataset, and [others](#additional-datasets). This study will be limited to American movies, as there is likely a skew towards American movies being nominated for the Oscars (TODO: show this).
 
 ## Research Questions
 - Do Oscar nominations align with popular opinion?
