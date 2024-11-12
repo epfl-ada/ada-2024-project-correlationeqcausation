@@ -25,11 +25,11 @@ Note: In the title.basics dataset, there is a problem with some values being wit
 
 We join these with our main dataset for analysis, see the data processing pipeline [data.ipynb](data.ipynb).
 
-## Methods
+## Methods TODO: Explain the mathematics of these
 - Regression/classification model
 - Propensity score
 - Correlation significance analysis
--
+- Binomial test
 
 ## Proposed timeline, organization within the team
 ### Timeline
@@ -41,8 +41,11 @@ We join these with our main dataset for analysis, see the data processing pipeli
 -c  
 
 ## Questions for TAs
+- The data features of our final dataframe contain NaN-values and often do not fully overlap. What is the most correct way of handling this when answering different research questions: Doing the analysis on different subsets, using as much data as possible (which will mean using different subsets of data for different questions, meaning we have to make some assumptions), or producing a fully clean (no NaN-values) subset of data, and doing all the analysis on that (Would unavoidably be a much smaller dataset)?
 
 
-## General notes:
+## Other notes:
 - Examining actor gender differences would also be interesting, but the Oscars are already split in male/female so it's not relevant.
 - We chose to analyze nominees and not only winners, because only winners would be a too small dataset for drawing proper conclusions.
+### Handling missing values
+Our datasets come from different sources, so there are naturally some issues in the merging of these, and general missing values in the original datasets. Our most vital columns (title, actor name, oscar_nominated) have no NaN-values, but other columns have varying amounts of NaN-values.
