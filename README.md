@@ -18,12 +18,11 @@ We will explore this topic based on the CMU Movie Summary Corpus dataset, and [o
 ### CMU Movie Summary Corpus
 Our main datset is the CMU Movie Summary Corpus, which contains infomration about movies (such as release date, revenue, run time, etc.), actors involved in the movies and plot summaries.
 ### Oscars
-In addition to the CMU Movie Summary Corpus dataset, we will be using a dataset of Oscar awards (https://www.kaggle.com/datasets/unanimad/the-oscar-award).
+In addition to the CMU Movie Summary Corpus dataset, we will be using a dataset of Oscar awards (https://www.kaggle.com/datasets/unanimad/the-oscar-award). We joined it to the CMU dataset using movie title, release year and actor name as a combined primary key. Combining with the CMU dataset resulted in 952 out of 63968 distinct movies who were nominated for oscars and 801 out of 134907 actors.
 ### IMDB
-Datasets from IMDB named title.basics.tsv.gz and title.ratings.tsv.gz  will also be utilized (https://datasets.imdbws.com/). These describe movies in IMDB with their ratings on the website.
-Note: In the title.basics dataset, there is a problem with some values being within double quotes, which initially caused some data corruption. We fixed this by using quoting=3 in our read_csv call.
+Datasets from IMDB named title.basics.tsv.gz and title.ratings.tsv.gz  will also be utilized (https://datasets.imdbws.com/). These describe movies in IMDB with their ratings on the website. The movie scores were joined to the movies using movie name and release year as the primary key. In combination with the previous datasets 36760 movies had ratings, 939 of which were nominated for oscars.
 
-We join these with our main dataset for analysis, see the data processing pipeline [data.ipynb](data.ipynb).
+For full documentation of joining and transforming data see the data processing pipeline [data.ipynb](data.ipynb).
 
 ## Methods TODO: Explain the mathematics of these
 - Regression/classification model
