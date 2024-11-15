@@ -36,43 +36,34 @@ For full documentation of joining and transforming data see the data processing 
 Our datasets come from different sources, so there are naturally some issues in the merging of these, and general missing values in the original datasets. Our most vital columns (title, actor name, oscar_nominated) have no NaN-values, but other columns have varying amounts of NaN-values.
 
 ## Methods:
+Preliminary implementations of these methods can be found in [results.ipynb](results.ipynb).
 ### Correlation
 No correlation implies that there is no causation. Hence this makes for a good starting point of our analysis.
 ### Kolmogorov-Smirnoff Test
 For different single dimensional, continuous empirical distributions, the KS test tells us if they come from the same underlying distribution. 
 Hence we can use it to see if for instance the underlying distributions of ratings of oscar nominated and non-oscar nominated movies the same.
-TODO rewrite
-### RQ1 - Kolmogorov-Smirnoff Test
-We use the KS test to check whether the ratings of oscar nominated vs un-nominated movies can come from the same distribution or not.
-The KS test makes sense for comparing distributions here because ratings are a one-dimensional continuous feature.
-### RQ2 - Correlation significance analysis
-As of now, we have just analysed the correlation between numerical features and the `oscar_nominated` feature, since no correlation implies no causation.
-Going forward, we can use the KS-test, the binomial test and more methods for individual features, selecting methods on a case by case basis. 
-We are, ofcourse, also interested in seeing if combinations of features also have predictive power.
-### RQ3 - Binomial test
-We use the binomial test to evaluate whether the probability distribution for american actors being nominated is different from the distribution for non-American actors.
-The binomial test checks whether the nomination rates we observe for American and non-American actors are likely to have come from the same distribution.
-### RQ4 - Logistic Regression/classification model
-As an initial analysis of the predictive power of actor features on oscar nominations, we performed logistic regression and analyzed the coefficients. 
-We intend to develop this further for P3, as it can be useful for answering all our research questions. 
+### Binomial test
+Binomial test can be used to assess the similarity between binary distributions (e.g. series of coinflips using different coins). We can use this to assess the differences between ethnicities and nationalities. For example, it can be used to check whether the nomination rates we observe for American and non-American actors are likely to have come from the same distribution.
+### Logistic Regression/classification model
+Logistic regression is used to model a binary prediction from data. It can be implemented to assess the predictive power of actor features on Oscar nominations. This analysis can be useful for answering all our research questions. 
 <br>
 Logistic regression learns coefficients for input features (normalized for numerical values and one-hot encoded for categorical features). 
 We interpret these coefficients as the effect of each feature on oscar nomination odds.
 
 ## Proposed timeline, organization within the team
 ### Timeline
-- 15.11-29.11 finalization of data cleaning and splitting for analysis
-- 30.11-10.12 individual analysis, each member researching a sub research question
+- 15.11-29.11 Finalization of data cleaning and splitting for analysis.
+- 30.11-10.12 Individual analysis, each member researching a sub research question.
 - 10.12-20.12 Data story writing, coordinating findings into a coherent story.
 
 ### Milestones:
-- Fixed data state for analysis 29.11
-- Individual research questions answered 10.12
-- Final structure of the data story ready 15.12
-- Submission 20.12
+- Fixed data state for analysis 29.11.
+- Individual research questions answered 10.12.
+- Final structure of the data story ready 15.12.
+- Submission 20.12.
 
 ## Questions for TAs
-- The data features of our final dataframe contain NaN-values and often do not fully overlap. What is the most correct way of handling this when answering different research questions: Doing the analysis on different subsets, using as much data as possible (which will mean using different subsets of data for different questions, meaning we have to make some assumptions), or producing a fully clean (no NaN-values) subset of data, and doing all the analysis on that (Would unavoidably be a much smaller dataset)? The dataset with no nan values would be 24 000 datapoints compared to 433 795 non-clean. Replacing NaN values trivially with mean values or similarly would not be correct, as the information is about real people.
+- The data features of our final dataframe contain NaN-values and often do not fully overlap. What is the most correct way of handling this when answering different research questions: Doing the analysis on different subsets, using as much data as possible (which will mean using different subsets of data for different questions, meaning we have to make some assumptions), or producing a fully clean (no NaN-values) subset of data, and doing all the analysis on that (Would unavoidably be a much smaller dataset)? The dataset with no NaN values would be 24 000 datapoints compared to 433 795 non-clean. Replacing NaN values trivially with mean values or similarly would not be correct, as the information is about real people.
 
 
 ## Other notes:
