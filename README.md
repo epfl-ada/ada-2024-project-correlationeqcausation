@@ -1,12 +1,12 @@
-# What factors affect Oscar nomiations?
+# What factors affect Oscar nominations?
 
 ## Abstract
 The Oscar Academy Awards are some of the most renowned movie awards in the world. Experts and critics carefully select nominees, and reward a few of them with the awards. In this project we aim to examine how various factors affect Oscar nominations in categories for specific actors (Such as best actress, best supporting actor). What drives the Oscar Academy Awards' decisions to nominate movies? Do Oscar nominations align with the popular opinion?
-To see if public opinion aligns with Oscar nominations, we will explore movie revenue and IMDB ratings in relation to Oscar nominations. To explore other factors affecting Oscar nominations, we look at properties such as actor ethnicity, theme/genre of the movies and actor history.  
-We will explore this topic based on the CMU Movie Summary Corpus dataset, and [others](#additional-datasets).
+To answer these questions, we will explore movie revenue and IMDB ratings in relation to Oscar nominations. To explore other factors affecting Oscar nominations, we look at properties such as actor ethnicity, theme/genre of the movies and actor history.  
+We will explore this topic based on the CMU Movie Summary Corpus dataset, and [others](#datasets).
 
 ## Research Questions
-### Main question: What factors affect Oscar nomiations?
+### Main question: What factors affect Oscar nominations?
 
 ### Subquestions:
 - Do Oscar nominations align with popular opinion?
@@ -14,15 +14,15 @@ We will explore this topic based on the CMU Movie Summary Corpus dataset, and [o
 - To what degree are Oscar winnings and nominations representative of the US population ethnicity statistics?
 - To what degree do personal actor features such as height and age correlate with Oscar nominations?
 
-## Datsets
+## Datasets
 ### CMU Movie Summary Corpus
-Our main datset is the CMU Movie Summary Corpus, which contains infomration about movies (such as release date, revenue, run time, etc.), actors involved in the movies and plot summaries.
+Our main dataset is the CMU Movie Summary Corpus, which contains information about movies (such as release date, revenue, run time, etc.), actors involved in the movies and plot summaries.
 ### Oscars
 In addition to the CMU Movie Summary Corpus dataset, we will be using a dataset of Oscar awards (https://www.kaggle.com/datasets/unanimad/the-oscar-award). We joined it to the CMU dataset using movie title, release year and actor name as a combined primary key. Combining with the CMU dataset resulted in 952 out of 63968 distinct movies who were nominated for oscars and 801 out of 134907 actors.
 ### IMDB
 Datasets from IMDB named title.basics.tsv.gz and title.ratings.tsv.gz  will also be utilized (https://datasets.imdbws.com/). These describe movies in IMDB with their ratings on the website. The movie scores were joined to the movies using movie name and release year as the primary key. In combination with the previous datasets 36760 movies had ratings, 939 of which were nominated for oscars.
 
-For full documentation of joining and transforming data see the data processing pipeline [data.ipynb](data.ipynb).
+For full documentation of joining and transforming data see the data processing pipeline [data.ipynb](data_pipeline.ipynb).
 
 ## Methods TODO: Explain the mathematics of these
 - Regression/classification model
@@ -38,7 +38,7 @@ For full documentation of joining and transforming data see the data processing 
 
 ### Milestones:
 - Fixed data state for analysis 29.11
-- Indiidual research questions answered 10.12
+- Individual research questions answered 10.12
 - Final structure of the data story ready 15.12
 - Submission 20.12
 
