@@ -26,13 +26,28 @@ Datasets from IMDB named title.basics.tsv.gz and title.ratings.tsv.gz  will also
 <br>
 We intend to use ratings from the IMDb dataset to gauge popular opinion for RQ1.
 
-For full documentation of joining and transforming data see the data processing pipeline [data.ipynb](data_pipeline.ipynb).
+For full documentation of joining and transforming data see the data processing pipeline [data_pipeline.ipynb](data_pipeline.ipynb).
 
-## Methods TODO: Explain the mathematics of these
-- Regression/classification model
-- Propensity score
-- Correlation significance analysis
-- Binomial test
+## Methods:
+We have already done some preliminary analyses for the research questions, which are documented along with the findings in [initial_analysis.ipynb](initial_analysis.ipynb).
+Our methods for the analyses are described below. 
+For P3, we intend to develop these further and also use TODO - (list of other methods). 
+### RQ1 - Kolmogorov-Smirnoff Test
+We use the KS test to check whether the ratings of oscar nominated vs un-nominated movies can come from the same distribution or not.
+The KS test makes sense for comparing distributions here because ratings are a one-dimensional continuous feature.
+### RQ2 - Correlation significance analysis
+As of now, we have just analysed the correlation between numerical features and the `oscar_nominated` feature, since no correlation implies no causation.
+Going forward, we can use the KS-test, the binomial test and more methods for individual features, selecting methods on a case by case basis. 
+We are, ofcourse, also interested in seeing if combinations of features also have predictive power.
+### RQ3 - Binomial test
+We use the binomial test to evaluate whether the probability distribution for american actors being nominated is different from the distribution for non-American actors.
+The binomial test checks whether the nomination rates we observe for American and non-American actors are likely to have come from the same distribution.
+### RQ4 - Logistic Regression/classification model
+As an initial analysis of the predictive power of actor features on oscar nominations, we performed logistic regression and analyzed the coefficients. 
+We intend to develop this further for P3, as it can be useful for answering all our research questions. 
+<br>
+Logistic regression learns coefficients for input features (normalized for numerical values and one-hot encoded for categorical features). 
+We interpret these coefficients as the effect of each feature on oscar nomination odds.
 
 ## Proposed timeline, organization within the team
 ### Timeline
