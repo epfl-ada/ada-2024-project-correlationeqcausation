@@ -24,9 +24,9 @@ Our main dataset is the CMU Movie Summary Corpus, which contains information abo
 <br>
 The CMU dataset contains information about the country of origin of the movie, languages used, etc. We intend to use these in our investigation of RQ2. Additionally, personal information about actors such as ethnicity, height and age in the CMU character dataset allow us to examine RQs 3 and 4.
 ### Oscars
-In addition to the CMU Movie Summary Corpus dataset, we will be using a [dataset of Oscar awards](https://www.kaggle.com/datasets/unanimad/the-oscar-award). We joined it to the CMU dataset using movie title, release year and actor name as a combined primary key. Combining with the CMU dataset resulted in 952 out of 63968 distinct movies who were nominated for oscars and 801 out of 134907 actors.
+In addition to the CMU Movie Summary Corpus dataset, we will be using a [dataset of Oscar awards](https://www.kaggle.com/datasets/unanimad/the-oscar-award). We joined it to the CMU dataset using movie title, release year and actor name as a combined primary key. Combining with the CMU dataset resulted in 952 out of 63968 distinct movies who were nominated for Oscars and 801 out of 134907 actors.
 ### IMDB
-[Datasets from IMDB](https://datasets.imdbws.com/) named title.basics.tsv.gz and title.ratings.tsv.gz  will also be utilized. These describe movies in IMDB with their ratings on the website. The movie scores were joined to the movies using movie name and release year as the primary key. In combination with the previous datasets 36760 movies had ratings, 939 of which were nominated for oscars.
+[Datasets from IMDB](https://datasets.imdbws.com/) named title.basics.tsv.gz and title.ratings.tsv.gz  will also be utilized. These describe movies in IMDB with their ratings on the website. The movie scores were joined to the movies using movie name and release year as the primary key. In combination with the previous datasets 36760 movies had ratings, 939 of which were nominated for Oscars.
 <br>
 We intend to use ratings from the IMDb dataset to gauge popular opinion for RQ1.
 
@@ -41,14 +41,14 @@ Preliminary implementations of these methods can be found in [results.ipynb](res
 No correlation implies that there is no causation. Hence this makes for a good starting point of our analysis.
 ### Kolmogorov-Smirnoff Test
 For different single dimensional, continuous empirical distributions, the KS test tells us if they come from the same underlying distribution. 
-Hence we can use it to see if for instance the underlying distributions of ratings of oscar nominated and non-oscar nominated movies the same.
+Hence we can use it to see if for instance the underlying distributions of ratings of Oscar nominated and non-Oscar nominated movies the same.
 ### Binomial test
 Binomial test can be used to assess the similarity between binary distributions (e.g. series of coinflips using different coins). We can use this to assess the differences between ethnicities and nationalities. For example, it can be used to check whether the nomination rates we observe for American and non-American actors are likely to have come from the same distribution.
 ### Logistic Regression/classification model
 Logistic regression is used to model a binary prediction from data. It can be implemented to assess the predictive power of actor features on Oscar nominations. This analysis can be useful for answering all our research questions. 
 <br>
 Logistic regression learns coefficients for input features (normalized for numerical values and one-hot encoded for categorical features). 
-We interpret these coefficients as the effect of each feature on oscar nomination odds.
+We interpret these coefficients as the effect of each feature on Oscar nomination odds.
 
 ## Proposed timeline, organization within the team
 ### Timeline
@@ -63,7 +63,7 @@ We interpret these coefficients as the effect of each feature on oscar nominatio
 - Submission 20.12.
 
 ## Questions for TAs
-- The data features of our final dataframe contain NaN-values and often do not fully overlap. What is the most correct way of handling this when answering different research questions: Doing the analysis on different subsets, using as much data as possible (which will mean using different subsets of data for different questions, meaning we have to make some assumptions), or producing a fully clean (no NaN-values) subset of data, and doing all the analysis on that (Would unavoidably be a much smaller dataset)? The dataset with no NaN values would be 24 000 datapoints compared to 433 795 non-clean. Replacing NaN values trivially with mean values or similarly would not be correct, as the information is about real people.
+- The data features of our final dataframe contain NaN-values and often do not fully overlap. What is the most correct way of handling this when answering different research questions: Doing the analysis on different subsets, using as much data as possible (which will mean using different subsets of data for different questions, meaning we have to make some assumptions), or producing a fully clean (no NaN-values) subset of data, and doing all the analysis on that (Would unavoidably be a much smaller dataset)? The dataset with no NaN values would be 24 000 datapoints compared to 433 795 non-clean. Replacing NaN values trivially with mean values or similarly would not be correct, as the information is about real people and assuming the values of features like age, gender and ethnicity does not make much sense.
 
 
 ## Other notes:
