@@ -32,15 +32,18 @@ For full documentation of joining and transforming data see the data processing 
 
 ## Proposed timeline, organization within the team
 ### Timeline
-??
+- 15.11-29.11 finalization of data cleaning and splitting for analysis
+- 30.11-10.12 individual analysis, each member researching a sub research question
+- 10.12-20.12 Data story writing, coordinating findings into a coherent story.
 
 ### Milestones:
--a  
--b  
--c  
+- Fixed data state for analysis 29.11
+- Indiidual research questions answered 10.12
+- Final structure of the data story ready 15.12
+- Submission 20.12
 
 ## Questions for TAs
-- The data features of our final dataframe contain NaN-values and often do not fully overlap. What is the most correct way of handling this when answering different research questions: Doing the analysis on different subsets, using as much data as possible (which will mean using different subsets of data for different questions, meaning we have to make some assumptions), or producing a fully clean (no NaN-values) subset of data, and doing all the analysis on that (Would unavoidably be a much smaller dataset)?
+- The data features of our final dataframe contain NaN-values and often do not fully overlap. What is the most correct way of handling this when answering different research questions: Doing the analysis on different subsets, using as much data as possible (which will mean using different subsets of data for different questions, meaning we have to make some assumptions), or producing a fully clean (no NaN-values) subset of data, and doing all the analysis on that (Would unavoidably be a much smaller dataset)? The dataset with no nan values would be 24 000 datapoints compared to 433 795 non-clean. Replacing NaN values trivially with mean values or similarly would not be correct, as the information is about real people.
 
 
 ## Other notes:
