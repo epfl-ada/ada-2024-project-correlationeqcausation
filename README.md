@@ -41,9 +41,9 @@ Preliminary implementations of these methods can be found in [results.ipynb](res
 No correlation implies that there is no causation. Hence this makes for a good starting point of our analysis.
 ### Kolmogorov-Smirnoff Test
 For different single dimensional, continuous empirical distributions, the KS test tells us if they come from the same underlying distribution. 
-Hence we can use it to see if for instance the underlying distributions of ratings of Oscar nominated and non-Oscar nominated movies the same.
+Hence we can use it to see if for instance the underlying distributions of ratings of Oscar nominated and non-Oscar nominated movies is the same.
 ### Binomial test
-Binomial test can be used to assess the similarity between binary distributions (e.g. series of coinflips using different coins). We can use this to assess the differences between ethnicities and nationalities. For example, it can be used to check whether the nomination rates we observe for American and non-American actors are likely to have come from the same distribution.
+Binomial test can be used to assess the similarity between binary distributions (e.g. series of coin flips using different coins). We can use this to assess the differences between ethnicities and nationalities. For example, it can be used to check whether the nomination rates we observe for American and non-American actors are likely to have come from the same distribution.
 ### Logistic Regression/classification model
 Logistic regression is used to model a binary prediction from data. It can be implemented to assess the predictive power of actor features on Oscar nominations. This analysis can be useful for answering all our research questions. 
 <br>
