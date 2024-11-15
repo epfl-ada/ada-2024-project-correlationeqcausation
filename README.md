@@ -9,18 +9,22 @@ We will explore this topic based on the CMU Movie Summary Corpus dataset, and [o
 ### Main question: What factors affect Oscar nominations?
 
 ### Subquestions:
-- Do Oscar nominations align with popular opinion?
-- To what degree are Oscar nominations affected by the origin country of the movie, and how does this interact with our other results?
-- To what degree are Oscar winnings and nominations representative of the US population ethnicity statistics?
-- To what degree do personal actor features such as height and age correlate with Oscar nominations?
+1. Do Oscar nominations align with popular opinion?
+2. To what degree are Oscar nominations affected by the origin country of the movie, and how does this interact with our other results?
+3. To what degree are Oscar winnings and nominations representative of the US population ethnicity statistics?
+4. To what degree do personal actor features such as height and age correlate with Oscar nominations?
 
 ## Datasets
 ### CMU Movie Summary Corpus
 Our main dataset is the CMU Movie Summary Corpus, which contains information about movies (such as release date, revenue, run time, etc.), actors involved in the movies and plot summaries.
+<br>
+The CMU dataset contains information about the country of origin of the movie, languages used, etc. We intend to use these in our investigation of RQ2. Additionally, personal information about actors such as ethnicity, height and age in the CMU character dataset allow us to examine RQs 3 and 4.
 ### Oscars
 In addition to the CMU Movie Summary Corpus dataset, we will be using a dataset of Oscar awards (https://www.kaggle.com/datasets/unanimad/the-oscar-award). We joined it to the CMU dataset using movie title, release year and actor name as a combined primary key. Combining with the CMU dataset resulted in 952 out of 63968 distinct movies who were nominated for oscars and 801 out of 134907 actors.
 ### IMDB
 Datasets from IMDB named title.basics.tsv.gz and title.ratings.tsv.gz  will also be utilized (https://datasets.imdbws.com/). These describe movies in IMDB with their ratings on the website. The movie scores were joined to the movies using movie name and release year as the primary key. In combination with the previous datasets 36760 movies had ratings, 939 of which were nominated for oscars.
+<br>
+We intend to use ratings from the IMDb dataset to gauge popular opinion for RQ1.
 
 For full documentation of joining and transforming data see the data processing pipeline [data.ipynb](data_pipeline.ipynb).
 
