@@ -1,4 +1,5 @@
 ADA_venv/*
+.DS_Store
 .idea*
 cache/*
 data/*
