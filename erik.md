@@ -5,7 +5,6 @@ relationship allowing us to connect them. Furthermore, the character table conta
 Further we introduce three augmented features: Number of movies starred in, average rating of previous movies, average box office revenue of previous movies.   
 
 The Oscars are comprised of many different cateogries. However, in the coming analysis we are interested in the following three categories for both men and women: actor/actress, actor/actress in a leading role, actor/actress in a supporting role. 
-
 # Actor career
 In this section we are intersted in finding out more about what characterizes the career of Oscar nominated actors. Furthermore, we explore how an actor's career is impacted after being nominated for their first Oscar. 
 
@@ -29,10 +28,18 @@ In the new sample the average number of movies starred in is 7.92. Let's further
 
 From this we make the conclusion that actors need to star in around 15 movies on average before being nominated for their first Oscar. In addition, we conclude that one of the reasons why some actors may not have been nominated for an Oscar is due to not having starred in enough movies yet or throught out their career.
 
-With the conclusion that actors need to star in more movies in order to receive Oscar nominations we continue our analysis by analysing if the "success" of the movies you starred in prior to being nominated matters.
+With the conclusion that actors need to star in more movies in order to receive Oscar nominations we continue our analysis by analysing if the "success" of the movies you starred in prior to being nominated matters. For the analysis we assume that the success of a movie is determined by the box office revenue and the IMDb rating. 
 
+![image](plots/revenue_rating_pre_non.png)
 
+Observing the plot above our initial conclusion is that actors going on to be nominated for an Oscar seem to generally star in higher rated movies prior to their first nomination, but not more comercially sucessful ones. We will further investigate this hypothesis by conducting T-tests with respect to the revenue and rating seperately.
 
+| Metric                                  | Non-Nominated       | Pre-Nominated      | P-Value            |
+|-----------------------------------------|---------------------|--------------------|--------------------|
+| Average box office revenue              | 86,090,801.55       | 84,983,818.47      | 0.8203             |
+| Average rating                          | 5.58                | 6.52               | 1.79e-37           |
+
+From the table above we conclude that actors who go on to be Oscar nominated star in more crically acclaimed movies than actors who do not end up being nominated. However, the comercial success of movies starred in seem to not matter for receiving Oscar nomination as the P-value is 0.82 and thus we accept the null hypothesis of the samples means being equal. A reason for this may be that some genres of movies appeal to the critics but not to the masses.
 
 # T-test
 A T-test is a statistical test used to determine if there is a significant difference between the means of two independent distribution. 

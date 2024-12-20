@@ -3,3 +3,4 @@ ADA_venv/*
 .idea*
 cache/*
 data/*
+*.pyc
