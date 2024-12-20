@@ -1,5 +1,8 @@
 # What factors affect Oscar nominations?
 
+## Data story:
+[https://anfindsen.github.io/CorrelationEqCausation/](https://anfindsen.github.io/CorrelationEqCausation/)
+
 ## Abstract
 The Oscar Academy Awards are some of the most renowned movie awards in the world. 
 Experts and critics carefully select nominees, and reward a few of them with the award. 
@@ -32,10 +35,7 @@ We intend to use ratings from the IMDb dataset to gauge popular opinion for RQ1.
 
 For full documentation of joining and transforming data see the data processing pipeline [data_pipeline.ipynb](data_pipeline.ipynb).
 
-#### Handling missing values
-Our datasets come from different sources, so there are naturally some issues in the merging of these, and general missing values in the original datasets. Our most vital columns (title, actor name, oscar_nominated) have no NaN-values, but other columns have varying amounts of NaN-values.
-
-## Methods:
+## Methods (Also explained on a separate page of the data story):
 Preliminary implementations of these methods can be found in [results.ipynb](results.ipynb).
 ### Correlation
 No correlation implies that there is no causation. Hence this makes for a good starting point of our analysis.
@@ -50,22 +50,16 @@ Logistic regression is used to model a binary prediction from data. It can be im
 Logistic regression learns coefficients for input features (normalized for numerical values and one-hot encoded for categorical features). 
 We interpret these coefficients as the effect of each feature on Oscar nomination odds.
 
-## Proposed timeline, organization within the team
-### Timeline
-- 15.11-29.11 Finalization of data cleaning and splitting for analysis.
-- 30.11-10.12 Individual analysis, each member researching a sub research question.
-- 10.12-20.12 Data story writing, coordinating findings into a coherent story.
+## Contributions:
+We worked as a team, so there is of course overlap between our contributions due to helping each other, proofreading etc. That being said, here are our main contribution areas:
 
-### Milestones:
-- Fixed data state for analysis 29.11.
-- Individual research questions answered 10.12.
-- Final structure of the data story ready 15.12.
-- Submission 20.12.
-
-## Questions for TAs
-- The data features of our final dataframe contain NaN-values and often do not fully overlap. What is the most correct way of handling this when answering different research questions: Doing the analysis on different subsets, using as much data as possible (which will mean using different subsets of data for different questions, meaning we have to make some assumptions), or producing a fully clean (no NaN-values) subset of data, and doing all the analysis on that (Would unavoidably be a much smaller dataset)? The dataset with no NaN values would be 24 000 datapoints compared to 433 795 non-clean. Replacing NaN values trivially with mean values or similarly would not be correct, as the information is about real people and assuming the values of features like age, gender and ethnicity does not make much sense.
+- Rasmus: Modelling for prediction, compiling main results.ipynb file
+- Erik: Data preprocessing pipeline, career analysis
+- Melker: Genre analysis, actor network analysis
+- Tejas: Clustering for analysis in different areas of analysis (high-level, actor, movie)
+- John: Setting up the data story website, nationality analysis
 
 
 ## Other notes:
 - Examining actor gender differences would also be interesting, but the Oscars are already split in male/female so it's not relevant.
-- We chose to analyze nominees and not only winners, because only winners would be a too small dataset for drawing proper conclusions.
+- We chose to analyze nominees and not only winners, because only using the winners would be a too small dataset for drawing proper conclusions.
