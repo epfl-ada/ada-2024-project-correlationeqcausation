@@ -4,7 +4,7 @@ import pandas as pd
 def get_nationality_dfs(movie_df):
     country_df = movie_df.copy()
     # Convert the strings in movie_df (currently on the format ['A', 'B']) to lists with json.loads. Json.loads requires double quotation marks, so we first replace to fix this.
-    #country_df['countries'] = movie_df['countries'].apply(lambda row: row.replace("'", '"')).apply(loads)
+    country_df['countries'] = movie_df['countries'].apply(lambda row: row.replace("'", '"')).apply(loads)
     print(f"Number of rows, including those with multiple nationalities: {len(country_df)}")
 
     # The column 'countries' contains a list of countries for each row. We explode the df on this list, so that we get a single row for each actor/country pair
