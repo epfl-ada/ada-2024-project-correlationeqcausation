@@ -3,6 +3,9 @@
 ## Data story:
 [https://anfindsen.github.io/CorrelationEqCausation/](https://anfindsen.github.io/CorrelationEqCausation/)
 
+## Note:
+In results.ipynb, our plotly plots are not correctly displayed in Github. The correct plots can be seen in our data story.
+
 ## Abstract
 The Oscar Academy Awards are some of the most renowned movie awards in the world. 
 Experts and critics carefully select nominees, and reward a few of them with the award. 
